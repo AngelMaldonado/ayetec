@@ -14,19 +14,18 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import Image from "next/image"
 import { useState } from "react"
 
 interface TemplateCardProps {
-  index: number
+  template: string
   title?: string
   description?: string
   features?: string[]
 }
 
 export function TemplateCard({
-  index,
-  title = `Plantilla ${index}`,
+  template,
+  title = `Plantilla ${template}`,
   description = "Diseño moderno y funcional",
   features = [
     "Diseño responsive",
@@ -41,13 +40,13 @@ export function TemplateCard({
   return (
     <Card className="overflow-hidden h-full flex flex-col">
       <div className="aspect-video w-full overflow-hidden">
-        <Image
-          src={`/placeholder.svg?height=200&width=400&text=Template ${index}`}
+        {/* <Image
+          src={`/templates/${template}/preview.png`}
           width={400}
           height={200}
-          alt={`Template ${index}`}
+          alt={`Template ${template}`}
           className="object-cover transition-all hover:scale-105"
-        />
+        /> */}
       </div>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
@@ -94,7 +93,7 @@ export function TemplateCard({
                   <h3 className="text-lg font-semibold">Vista previa</h3>
                   <div className="h-full lg:aspect-video w-full overflow-hidden rounded-lg border">
                     <iframe
-                      src={`/templates/${index}`}
+                      src={`/templates/${template}/index.html`}
                       className="w-full h-full border-0"
                       title={`Preview of ${title}`}
                     />

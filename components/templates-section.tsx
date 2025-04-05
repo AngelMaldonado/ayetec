@@ -1,6 +1,9 @@
 import { TemplateCard } from "@/components/template-card"
+import { useAppContext } from "@/providers/app-provider"
 
 export function TemplatesSection() {
+  const { templates } = useAppContext()
+
   return (
     <section id="templates" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
@@ -15,8 +18,8 @@ export function TemplatesSection() {
           </div>
         </div>
         <div className="mx-auto grid max-w-5xl gap-6 py-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <TemplateCard key={i} index={i + 1} />
+          {templates.map((template, index) => (
+            <TemplateCard key={index} template={template} />
           ))}
         </div>
       </div>
