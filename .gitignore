@@ -21,6 +21,7 @@
 /build
 
 # misc
+.vscode/
 HOME/
 .DS_Store
 *.pem
