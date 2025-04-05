@@ -368,7 +368,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    "Increíble servicio. Mi landing page quedó perfecta y en tiempo récord. Totalmente recomendado."
+                    &ldquo;Increíble servicio. Mi landing page quedó perfecta y en tiempo récord. Totalmente recomendado.&rdquo;
                   </p>
                 </CardContent>
               </Card>
@@ -386,8 +386,8 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    "Mi portafolio quedó espectacular. El proceso fue muy sencillo y el resultado superó mis
-                    expectativas."
+                    &ldquo;Mi portafolio quedó espectacular. El proceso fue muy sencillo y el resultado superó mis
+                    expectativas.&rdquo;
                   </p>
                 </CardContent>
               </Card>
@@ -405,7 +405,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    "Profesionalismo y rapidez. Mi sitio web empresarial quedó exactamente como lo imaginaba."
+                    &ldquo;Profesionalismo y rapidez. Mi sitio web empresarial quedó exactamente como lo imaginaba.&rdquo;
                   </p>
                 </CardContent>
               </Card>
