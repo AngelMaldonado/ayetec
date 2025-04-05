@@ -54,17 +54,9 @@ export function ContactForm() {
         <Label htmlFor="message">Mensaje o requerimientos</Label>
         <Textarea id="message" placeholder="Describe tu proyecto o necesidades..." className="min-h-[120px]" required />
       </div>
-      <div className="flex flex-col gap-4 sm:flex-row">
+      <div className="flex flex-col gap-4">
         <Button type="submit" className="w-full" disabled={isLoading}>
-          {isLoading ? "Enviando..." : "Enviar mensaje"}
-        </Button>
-        <Button
-          type="button"
-          variant="outline"
-          className="w-full"
-          onClick={() => window.alert("Simulación de pago con Stripe")}
-        >
-          Pagar ahora
+          {isLoading ? "Enviando..." : "Enviar"}
         </Button>
       </div>
       <p className="text-xs text-muted-foreground text-center">
