@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Navigation } from "@/components/navigation";
-import { Footer } from "@/components/footer";
+import path from "path";
+import fs from "fs";
+import { AppProvider } from "@/providers/app-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -111,12 +112,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const templates = fs.readdirSync(path.join(process.cwd(), 'public', 'templates'))
+
   return (
     <html lang="es">
       <body className={inter.className}>
-        <Navigation />
-        {children}
-        <Footer />
+        <AppProvider templates={templates}>
+          {children}
+        </AppProvider>
       </body>
     </html>
   );
