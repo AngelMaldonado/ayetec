@@ -14,27 +14,15 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import { ExternalLink, Fullscreen } from "lucide-react"
 import { useState } from "react"
 
 interface TemplateCardProps {
-  template: string
-  title?: string
-  description?: string
-  features?: string[]
+  template: Template
 }
 
-export function TemplateCard({
-  template,
-  title = `Plantilla ${template}`,
-  description = "Diseño moderno y funcional",
-  features = [
-    "Diseño responsive",
-    "Optimizado para SEO",
-    "Integración con redes sociales",
-    "Panel de administración",
-    "Soporte multilingüe"
-  ]
-}: TemplateCardProps) {
+export function TemplateCard({ template }: TemplateCardProps) {
+  const { title, description, features, name } = template
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -90,12 +78,41 @@ export function TemplateCard({
                   </ul>
                 </div>
                 <div className="space-y-4 w-full h-full flex flex-col justify-center items-center lg:col-span-2">
-                  <h3 className="text-lg font-semibold">Vista previa</h3>
-                  <div className="h-full lg:aspect-video w-full overflow-hidden rounded-lg border">
+                  <div className="flex items-center justify-between w-full">
+                    <h3 className="text-lg font-semibold">Vista previa</h3>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => {
+                        const iframe = document.querySelector(`iframe[title="Preview of ${title}"]`) as HTMLIFrameElement;
+                        if (iframe) {
+                          if (iframe.requestFullscreen) {
+                            iframe.requestFullscreen();
+                          } else if ('webkitRequestFullscreen' in iframe) {
+                            (iframe as unknown as { webkitRequestFullscreen: () => Promise<void> }).webkitRequestFullscreen();
+                          } else if ('msRequestFullscreen' in iframe) {
+                            (iframe as unknown as { msRequestFullscreen: () => Promise<void> }).msRequestFullscreen();
+                          }
+                        }
+                      }}
+                      className="flex items-center gap-2"
+                    >
+                      <Fullscreen className="h-4 w-4" />
+                      Pantalla completa
+                    </Button>
+                    {/* button to open template in new tab */}
+                    <Button variant="outline" size="sm" onClick={() => {
+                      window.open(`/templates/${name}/index.html`, "_blank");
+                    }}>
+                      <ExternalLink className="h-4 w-4" />
+                      Abrir en nueva pestaña
+                    </Button>
+                  </div>
+                  <div className="h-full lg:aspect-video w-full overflow-hidden rounded-lg border relative group">
                     <iframe
-                      src={`/templates/${template}/index.html`}
+                      src={`/templates/${name}/index.html`}
                       className="w-full h-full border-0"
-                      title={`Preview of ${title}`}
+                      title={`Vista previa de ${title}`}
                     />
                   </div>
                 </div>

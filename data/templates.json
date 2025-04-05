@@ -1,0 +1,80 @@
+[
+  {
+    "title": "Antique Café",
+    "name": "antique_cafe",
+    "description": "Diseño para un café antiguo",
+    "image": "https://via.placeholder.com/150",
+    "features": [
+      "Diseño moderno y clásico",
+      "Fondo de color marrón",
+      "Fuentes elegantes",
+      "Menú interactivo",
+      "Galería de imágenes"
+    ]
+  },
+  {
+    "title": "Applight",
+    "name": "applight",
+    "description": "Diseño para una tienda de electrónica",
+    "image": "https://via.placeholder.com/150",
+    "features": [
+      "Diseño moderno y funcional",
+      "Fondo de color azul",
+      "Fuentes elegantes",
+      "Menú interactivo",
+      "Galería de imágenes"
+    ]
+  },
+  {
+    "title": "Box",
+    "name": "box",
+    "description": "Diseño para una academia de boxeo",
+    "image": "https://via.placeholder.com/150",
+    "features": [
+      "Diseño moderno y funcional",
+      "Fondo de color marrón",
+      "Fuentes elegantes",
+      "Menú interactivo",
+      "Galería de imágenes"
+    ]
+  },
+  {
+    "title": "Finexo",
+    "name": "finexo",
+    "description": "Diseño para una tienda de muebles",
+    "image": "https://via.placeholder.com/150",
+    "features": [
+      "Diseño moderno y funcional",
+      "Fondo de color marrón",
+      "Fuentes elegantes",
+      "Menú interactivo",
+      "Galería de imágenes"
+    ]
+  },
+  {
+    "title": "SBS",
+    "name": "sbs",
+    "description": "Diseño para una tienda de muebles",
+    "image": "https://via.placeholder.com/150",
+    "features": [
+      "Diseño moderno y funcional",
+      "Fondo de color marrón",
+      "Fuentes elegantes",
+      "Menú interactivo",
+      "Galería de imágenes"
+    ]
+  },
+  {
+    "title": "Spering",
+    "name": "spering",
+    "description": "Diseño para una tienda de muebles",
+    "image": "https://via.placeholder.com/150",
+    "features": [
+      "Diseño moderno y funcional",
+      "Fondo de color marrón",
+      "Fuentes elegantes",
+      "Menú interactivo",
+      "Galería de imágenes"
+    ]
+  }
+]
