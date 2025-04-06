@@ -19,28 +19,28 @@ export function ServicesSection() {
         </div>
         <div className="mx-auto grid max-w-5xl gap-6 py-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           <ServiceCard
-            icon={<Laptop className="h-6 w-6 text-primary" />}
-            title="Landing Básica"
-            description="Página de aterrizaje simple y efectiva para tu negocio o proyecto."
-            price="$99"
-          />
-          <ServiceCard
-            icon={<Building className="h-6 w-6 text-primary" />}
-            title="Sitio Empresarial"
-            description="Sitio web completo para empresas con múltiples secciones."
-            price="$249"
-          />
-          <ServiceCard
             icon={<PenTool className="h-6 w-6 text-primary" />}
             title="Portafolio Personal"
             description="Portafolio profesional para mostrar tus proyectos y habilidades."
-            price="$149"
+            price="900.00"
           />
           <ServiceCard
             icon={<Calendar className="h-6 w-6 text-primary" />}
             title="Evento o Campaña"
             description="Página para promocionar tu evento o campaña de marketing."
-            price="$179"
+            price="1,500.00"
+          />
+          <ServiceCard
+            icon={<Laptop className="h-6 w-6 text-primary" />}
+            title="Landing Básica"
+            description="Página de aterrizaje simple y efectiva para tu negocio o proyecto."
+            price="2,500.00"
+          />
+          <ServiceCard
+            icon={<Building className="h-6 w-6 text-primary" />}
+            title="Sitio Empresarial"
+            description="Sitio web completo para empresas con múltiples secciones."
+            price="3,500.00"
           />
         </div>
       </div>
@@ -67,6 +67,7 @@ function ServiceCard({ icon, title, description, price }: ServiceCardProps) {
       <CardContent className="text-center flex-grow">
         <p className="text-muted-foreground">{description}</p>
         <p className="mt-4 text-2xl font-bold">{price}</p>
+        <p className="text-muted-foreground">MXN</p>
       </CardContent>
       <CardFooter className="flex justify-center">
         <Button asChild variant="outline" className="w-full">

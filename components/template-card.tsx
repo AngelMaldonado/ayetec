@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/dialog"
 import { ExternalLink, Fullscreen } from "lucide-react"
 import { useState } from "react"
+import Image from "next/image"
 
 interface TemplateCardProps {
   template: Template
@@ -26,15 +27,15 @@ export function TemplateCard({ template }: TemplateCardProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <Card className="overflow-hidden h-full flex flex-col">
+    <Card className="overflow-hidden h-full flex flex-col pt-0">
       <div className="aspect-video w-full overflow-hidden">
-        {/* <Image
-          src={`/templates/${template}/preview.png`}
+        <Image
+          src={`/templates/${name}/screenshot.png`}
           width={400}
           height={200}
-          alt={`Template ${template}`}
+          alt={`Template ${name}`}
           className="object-cover transition-all hover:scale-105"
-        /> */}
+        />
       </div>
       <CardHeader>
         <CardTitle>{title}</CardTitle>

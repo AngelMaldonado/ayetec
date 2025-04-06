@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail, Rocket, Twitter } from "lucide-react"
+import { Github, Linkedin, Mail, Phone, Rocket } from "lucide-react"
+import Link from "next/link"
 
 export function Footer() {
   return (
@@ -9,13 +10,13 @@ export function Footer() {
           <span className="text-lg font-bold">AyE</span>
         </div>
         <div className="flex items-center gap-4">
-          <SocialLink href="#" icon={<Twitter className="h-5 w-5" />} label="Twitter" />
-          <SocialLink href="#" icon={<Github className="h-5 w-5" />} label="GitHub" />
-          <SocialLink href="#" icon={<Linkedin className="h-5 w-5" />} label="LinkedIn" />
-          <SocialLink href="mailto:contacto@webdev.com" icon={<Mail className="h-5 w-5" />} label="Email" />
+          <SocialLink href="https://github.com/AngelMaldonado" icon={<Github className="h-5 w-5" />} label="GitHub" />
+          <SocialLink href="https://www.linkedin.com/in/angelmaldonadojz/" icon={<Linkedin className="h-5 w-5" />} label="LinkedIn" />
+          <SocialLink href="mailto:amaldonadojuarez@gmail.com" icon={<Mail className="h-5 w-5" />} label="Email" />
+          <SocialLink href="https://api.whatsapp.com/send?phone=5214181107571&text=Hola%2C%20quisiera%20pedir%20informes%20sobre%20la%20creaci%C3%B3n%20de%20una%20p%C3%A1gina%20web%20%F0%9F%98%81" icon={<Phone className="h-5 w-5" />} label="WhatsApp" />
         </div>
         <p className="text-sm text-muted-foreground text-center md:text-left">
-          &copy; {new Date().getFullYear()} AyE. Todos los derechos reservados.
+          {new Date().getFullYear()}
         </p>
       </div>
     </footer>
@@ -28,11 +29,11 @@ interface SocialLinkProps {
   label: string
 }
 
-function SocialLink({ href, icon, label }: SocialLinkProps) {
+export function SocialLink({ href, icon, label }: SocialLinkProps) {
   return (
-    <a href={href} className="text-muted-foreground hover:text-foreground">
+    <Link href={href} target="_blank" className="text-muted-foreground hover:text-foreground">
       {icon}
       <span className="sr-only">{label}</span>
-    </a>
+    </Link>
   )
 } 
