@@ -1,4 +1,8 @@
 import { ContactForm } from "@/components/contact-form"
+import { Instagram, Phone } from "lucide-react"
+import { SocialLink } from "./footer"
+import { Button } from "./ui/button"
+import Link from "next/link"
 
 export function ContactSection() {
   return (
@@ -14,6 +18,19 @@ export function ContactSection() {
         </div>
         <div className="mx-auto max-w-lg py-12 px-4 sm:px-0">
           <ContactForm />
+        </div>
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+            O también puedes enviar un mensaje a través de WhatsApp:
+          </p>
+          <div className="flex flex-row items-center justify-center space-x-4">
+            <Button asChild>
+              <Link href="https://api.whatsapp.com/send?phone=5214181107571&text=Hola%2C%20quisiera%20pedir%20informes%20sobre%20la%20creaci%C3%B3n%20de%20una%20p%C3%A1gina%20web%20%F0%9F%98%81">
+                <Phone className="h-5 w-5" />
+                Abrir WhatsApp
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
