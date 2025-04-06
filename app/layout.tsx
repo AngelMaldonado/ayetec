@@ -1,9 +1,9 @@
+import { AppProvider } from "@/providers/app-provider";
+import fs from "fs";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import path from "path";
-import fs from "fs";
-import { AppProvider } from "@/providers/app-provider";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -89,7 +89,6 @@ export const metadata: Metadata = {
   manifest: "/manifest.json", // Placeholder - create a web app manifest
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
       { url: "/icon.png", type: "image/png", sizes: "32x32" },
     ],
     apple: [
@@ -112,12 +111,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const templates = fs.readdirSync(path.join(process.cwd(), 'public', 'templates'))
+  const templatesData = fs.readFileSync(path.join(process.cwd(), 'data', 'templates.json'), 'utf8')
+  const templatesJSON = JSON.parse(templatesData) as Template[]
 
   return (
     <html lang="es">
       <body className={inter.className}>
-        <AppProvider templates={templates}>
+        <AppProvider templates={templatesJSON}>
           {children}
         </AppProvider>
       </body>

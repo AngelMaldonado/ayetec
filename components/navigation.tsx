@@ -41,7 +41,7 @@ export function Navigation() {
             className="text-sm font-medium hover:underline underline-offset-4"
             onClick={(e) => scrollToSection(e, "templates")}
           >
-            Plantillas
+            Diseños
           </a>
           <a
             href="#process"
@@ -94,7 +94,7 @@ export function Navigation() {
               className="text-sm font-medium hover:underline underline-offset-4"
               onClick={(e) => scrollToSection(e, "templates")}
             >
-              Plantillas
+              Diseños
             </a>
             <a
               href="#process"
