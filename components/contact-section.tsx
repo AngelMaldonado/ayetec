@@ -1,8 +1,7 @@
 import { ContactForm } from "@/components/contact-form"
-import { Instagram, Phone } from "lucide-react"
-import { SocialLink } from "./footer"
-import { Button } from "./ui/button"
+import { Phone } from "lucide-react"
 import Link from "next/link"
+import { Button } from "./ui/button"
 
 export function ContactSection() {
   return (
