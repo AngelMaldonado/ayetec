@@ -33,7 +33,7 @@ interface BenefitItemProps {
 function BenefitItem({ title, description, className }: BenefitItemProps) {
   return (
     <div className={cn("flex flex-col items-center space-y-2 text-center p-4", className)}>
-      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary">
         <Check className="h-6 w-6 text-primary" />
       </div>
       <h3 className="text-lg font-bold">{title}</h3>

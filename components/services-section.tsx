@@ -59,7 +59,7 @@ function ServiceCard({ icon, title, description, price }: ServiceCardProps) {
   return (
     <Card className="h-full flex flex-col">
       <CardHeader className="flex flex-col items-center gap-2">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/15">
           {icon}
         </div>
         <CardTitle>{title}</CardTitle>
