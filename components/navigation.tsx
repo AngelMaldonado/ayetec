@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Rocket, Menu, X } from "lucide-react"
+import { ModeToggle } from "./ui/theme-toggle"
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -60,7 +61,8 @@ export function Navigation() {
         </nav>
 
         {/* Desktop Contact Button */}
-        <div className="hidden md:block">
+        <div className="hidden md:flex gap-2">
+          <ModeToggle />
           <Button asChild>
             <a href="#contact" onClick={(e) => scrollToSection(e, "contact")}>
               Contacto
@@ -68,7 +70,10 @@ export function Navigation() {
           </Button>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button & Theme Toggle */}
+        <div className="ml-auto mr-2 md:hidden">
+          <ModeToggle />
+        </div>
         <button
           className="md:hidden p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
