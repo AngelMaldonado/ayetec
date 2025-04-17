@@ -1,20 +1,20 @@
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
-
+import Image from "next/image"
+import ParticlesBackground from "@/components/ui/particles"
 export function HeroSection() {
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden text-center lg:text-start">
+      <ParticlesBackground />
       <div className="container h-full mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+        <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_500px]">
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-6xl/none">
-                Haz que tu Marca Brille en la Web
+                Tu <span className="text-rose-500">visión</span>, nuestra <span className="text-rose-500">misión</span>
               </h1>
               <p className="max-w-[600px] text-muted-foreground text-base sm:text-lg md:text-xl">
-                Sitios web, rápidos y modernos para tu negocio o proyecto personal. Diseño personalizado,
-                entrega en tiempo récord, dominio gratis por 1 año y monitoreo continuo.
+                Soluciones de software hechas a medida para tu negocio o proyecto personal.
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -32,7 +32,7 @@ export function HeroSection() {
                     }
                   }}
                 >
-                  Ver Diseños
+                  Ver Proyectos
                 </a>
               </Button>
             </div>

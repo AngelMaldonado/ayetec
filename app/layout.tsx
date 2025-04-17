@@ -1,10 +1,10 @@
+import { ThemeProvider } from "@/components/theme-provider";
 import { AppProvider } from "@/providers/app-provider";
 import fs from "fs";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import path from "path";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
