@@ -32,7 +32,12 @@ interface BenefitItemProps {
 
 function BenefitItem({ title, description, className }: BenefitItemProps) {
   return (
-    <div className={cn("flex flex-col items-center space-y-2 text-center p-4", className)}>
+    <div className={cn(
+      "flex flex-col items-center space-y-2 text-center p-4 bg-secondary/50 rounded-lg",
+      "transition-all duration-300 ease-in-out hover:scale-105 hover:rotate-1",
+      "hover:shadow-[0_0_15px_rgba(var(--primary),0.5)]",
+      className
+    )}>
       <div className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary">
         <Check className="h-6 w-6 text-primary" />
       </div>

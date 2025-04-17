@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Box, Building, Calendar, Laptop, PenTool } from "lucide-react"
+import { Box, Building, Calendar, Computer, Globe, Laptop, PenTool, ShoppingCartIcon, Smartphone } from "lucide-react"
 
 export function ServicesSection() {
   return (
@@ -10,10 +10,10 @@ export function ServicesSection() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
               <Box className="inline-block h-10 w-10 mr-2" />
-              Paquetes
+              Nuestros Servicios
             </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-              Elige el paquete que mejor se adapte a tus necesidades
+              Elige el servicio que mejor se adapte a tus necesidades
             </p>
           </div>
         </div>
@@ -42,6 +42,30 @@ export function ServicesSection() {
             description="Sitio web completo para empresas con múltiples secciones."
             price="3,500.00"
           />
+          <ServiceCard
+            icon={<Globe className="h-6 w-6 text-primary" />}
+            title="Aplicación Web"
+            description="Aplicación web con capacidad de gestión de datos."
+            price="Variable"
+          />
+          <ServiceCard
+            icon={<ShoppingCartIcon className="h-6 w-6 text-primary" />}
+            title="Tienda Online"
+            description="Tienda online con dashboard para gestión de inventario y ventas."
+            price="Variable"
+          />
+          <ServiceCard
+            icon={<Smartphone className="h-6 w-6 text-primary" />}
+            title="Aplicación Móvil"
+            description="Aplicación móvil android para tu negocio o proyecto."
+            price="Variable"
+          />
+          <ServiceCard
+            icon={<Computer className="h-6 w-6 text-primary" />}
+            title="Aplicación de Escritorio"
+            description="Aplicación de escritorio para Mac, Windows o Linux."
+            price="Variable"
+          />
         </div>
       </div>
     </section>
@@ -57,7 +81,7 @@ interface ServiceCardProps {
 
 function ServiceCard({ icon, title, description, price }: ServiceCardProps) {
   return (
-    <Card className="h-full flex flex-col">
+    <Card className="h-full flex flex-col transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(var(--primary),0.6)] hover:scale-[1.02]">
       <CardHeader className="flex flex-col items-center gap-2">
         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/15">
           {icon}
