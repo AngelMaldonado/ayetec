@@ -1,8 +1,8 @@
 "use client"
-// components/ParticlesBackground.jsx
-import { useCallback, useEffect, useMemo, useState } from "react";
+
+import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { Container, Engine, ISourceOptions } from "@tsparticles/engine";
+import { Container, ISourceOptions } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 
 export default function ParticlesBackground() {

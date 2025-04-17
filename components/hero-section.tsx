@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 import ParticlesBackground from "@/components/ui/particles"
+import ModelViewer from "./model-viewer"
 export function HeroSection() {
 
   return (
@@ -38,14 +38,10 @@ export function HeroSection() {
             </div>
           </div>
           <div className="flex items-center justify-center order-first lg:order-last">
-            <div className="relative h-[250px] w-[250px] sm:h-[300px] sm:w-[300px] md:h-[350px] md:w-[350px] rounded-full bg-muted p-4">
-              <Image
-                src="/hero.webp"
-                width={350}
-                height={350}
-                alt="Ilustración desarrolladores"
-                className="rounded-full object-cover"
-              />
+            <div className="relative h-[250px] w-[250px] sm:h-[300px] sm:w-[300px] md:h-[350px] md:w-[350px] p-4">
+              <div className="absolute w-3/4 h-3/4 left-1/2 bottom-0 -translate-x-1/2 rounded-full bg-primary/50 border-white border-5">
+              </div>
+              <ModelViewer />
             </div>
           </div>
         </div>
