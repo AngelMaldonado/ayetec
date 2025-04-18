@@ -7,7 +7,7 @@ import { HeroSection } from "@/components/hero-section"
 import { Navigation } from "@/components/navigation"
 import { ProcessSection } from "@/components/process-section"
 import { ServicesSection } from "@/components/services-section"
-import { TemplatesSection } from "@/components/templates-section"
+import { CaseStudiesSection } from "@/components/templates-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
         <HeroSection />
         <ServicesSection />
         <BenefitsSection />
-        <TemplatesSection />
+        <CaseStudiesSection />
         <ContactSection />
         <ProcessSection />
         <TestimonialsSection />

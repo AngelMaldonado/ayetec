@@ -22,7 +22,7 @@ export function Navigation() {
 
   return (
     <header className="sticky top-0 z-40 bg-background/90 will-change-scroll backdrop-blur-sm">
-      <div className="container mx-auto flex h-16 items-center justify-between py-4">
+      <div className="container mx-auto flex h-16 items-center justify-between py-4 px-4">
         <div className="flex items-center gap-2">
           <Rocket className="h-6 w-6" />
           <span className="text-lg font-bold">AyE</span>
@@ -42,7 +42,7 @@ export function Navigation() {
             className="text-sm font-medium hover:underline underline-offset-4"
             onClick={(e) => scrollToSection(e, "templates")}
           >
-            Diseños
+            Casos de éxito
           </a>
           <a
             href="#process"
@@ -99,7 +99,7 @@ export function Navigation() {
               className="text-sm font-medium hover:underline underline-offset-4"
               onClick={(e) => scrollToSection(e, "templates")}
             >
-              Diseños
+              Casos de éxito
             </a>
             <a
               href="#process"
