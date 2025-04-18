@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/theme-provider";
 import { AppProvider } from "@/providers/app-provider";
 import fs from "fs";
 import type { Metadata, Viewport } from "next";
@@ -115,11 +116,17 @@ export default function RootLayout({
   const templatesJSON = JSON.parse(templatesData) as Template[]
 
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <body className={inter.className}>
-        <AppProvider templates={templatesJSON}>
-          {children}
-        </AppProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+        >
+          <AppProvider templates={templatesJSON}>
+            {children}
+          </AppProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
