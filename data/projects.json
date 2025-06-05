@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "title": "ATodaVenta",
+    "description": "Aplicación móvil para gestión de ventas con inteligencia artificial",
+    "longDescription": "Esta aplicación es una herramienta que ayuda a los vendedores a tomar decisiones en sus ventas. Utiliza inteligencia artificial para analizar los datos de las ventas y ofrecer recomendaciones ayudar a los emprendedores a hacer crecer su negocio. Actualmente se encuentra en fase de desarrollo, si es de su interés existe una página donde puede apuntarse al acceso anticipado (https://atodaventa.tech).",
+    "thumbnail": "/projects/atodaventa-thumbnail.jpg",
+    "image": "/projects/atodaventa.jpg",
+    "category": "mobile",
+    "client": "Software as a Service",
+    "results": [
+      "Ayuda a los vendedores a tomar decisiones",
+      "Mejora la eficiencia de las ventas",
+      "Chat con IA experta en los negocios de los clientes"
+    ],
+    "slug": "atodaventa"
+  },
+  {
+    "id": "2",
+    "title": "Mugs and Designs",
+    "description": "E-commerce para la venta de productos de diseños personalizados",
+    "longDescription": "Mugs and Designs es un negocio dedicado a la venta de productos de diseños personalizados. Este proyecto fue desarrollado con la finalidad de brindar un nuevo canal de ventas con la capacidad de gestionar los productos y las ventas en línea. Esta solución le permitió a Mugs & Designs vender productos físicos como camisetas, tazas, etc. Y productos digitales como stickers, archivos de diseño, fotografías editadas, y más. Tiene integración de pagos completamente automatizada.",
+    "thumbnail": "/projects/mugsanddesigns-thumbnail.jpg",
+    "image": "/projects/mugsanddesigns.jpg",
+    "category": "web",
+    "client": "Mugs and Designs",
+    "results": [
+      "Nuevo canal de ventas para la empresa",
+      "Pagos integrados con Stripe",
+      "Panel de administración para el manejo de productos y ventas"
+    ],
+    "slug": "mugsanddesigns"
+  },
+  {
+    "id": "3",
+    "title": "SMFotomark",
+    "description": "Página web para la muestra de productos y servicios de la empresa",
+    "longDescription": "SMFotomark es una empresa dedicada a la venta de productos de fotomontaje y paquetes de graduación. La página web que se le brindó a SMFotomark le permite mostrar sus productos y servicios de manera profesional y atractiva. Además, cuenta con un panel de gestión de contenido (CMS) para que SMFotomark pueda gestionar el contenido de la página web de manera sencilla y eficiente.",
+    "thumbnail": "/projects/smfotomark-thumbnail.jpg",
+    "image": "/projects/smfotomark.jpg",
+    "category": "web",
+    "client": "SMFotomark",
+    "results": [
+      "Muestra de productos y servicios de la empresa",
+      "Múltiples páginas y CMS para el manejo de contenido",
+      "Galería de fotos"
+    ],
+    "slug": "smfotomark"
+  }
+]

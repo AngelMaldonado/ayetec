@@ -20,10 +20,10 @@ export function HeroSection() {
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Button asChild size="lg" className="px-8 w-full lg:min-[400px]:w-auto">
                 <a
-                  href="#templates"
+                  href="#projects"
                   onClick={(e) => {
                     e.preventDefault()
-                    const element = document.getElementById("templates")
+                    const element = document.getElementById("projects")
                     if (element) {
                       window.scrollTo({
                         top: element.offsetTop - 80,
