@@ -3,7 +3,7 @@ import { Check, Globe, Smartphone, Monitor } from "lucide-react"
 
 export function BenefitsSection() {
   return (
-    <section className="w-full py-6 md:py-12">
+    <section id="benefits" className="w-full py-6 md:py-12">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-5xl space-y-12">
           {/* Web Development Benefits */}

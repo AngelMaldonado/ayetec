@@ -46,7 +46,7 @@ interface ProcessStepProps {
 function ProcessStep({ number, title, description }: ProcessStepProps) {
   return (
     <div className="flex flex-col items-center space-y-4 text-center p-4">
-      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-white">
+      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-white dark:bg-primary/5">
         <span className="text-xl font-bold">{number}</span>
       </div>
       <h3 className="text-xl font-bold">{title}</h3>

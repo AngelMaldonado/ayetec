@@ -38,11 +38,18 @@ export function Navigation() {
             Servicios
           </a>
           <a
+            href="#projects"
+            className="text-sm font-medium hover:underline underline-offset-4"
+            onClick={(e) => scrollToSection(e, "projects")}
+          >
+            Proyectos
+          </a>
+          <a
             href="#templates"
             className="text-sm font-medium hover:underline underline-offset-4"
             onClick={(e) => scrollToSection(e, "templates")}
           >
-            Casos de éxito
+            Diseños Web
           </a>
           <a
             href="#process"
@@ -51,13 +58,13 @@ export function Navigation() {
           >
             Proceso
           </a>
-          <a
+          {/* <a
             href="#testimonials"
             className="text-sm font-medium hover:underline underline-offset-4"
             onClick={(e) => scrollToSection(e, "testimonials")}
           >
             Testimonios
-          </a>
+          </a> */}
         </nav>
 
         {/* Desktop Contact Button */}
@@ -95,7 +102,7 @@ export function Navigation() {
               Servicios
             </a>
             <a
-              href="#templates"
+              href="#projects"
               className="text-sm font-medium hover:underline underline-offset-4"
               onClick={(e) => scrollToSection(e, "templates")}
             >
@@ -109,12 +116,19 @@ export function Navigation() {
               Proceso
             </a>
             <a
+              href="#templates"
+              className="text-sm font-medium hover:underline underline-offset-4"
+              onClick={(e) => scrollToSection(e, "templates")}
+            >
+              Diseños Web
+            </a>
+            {/* <a
               href="#testimonials"
               className="text-sm font-medium hover:underline underline-offset-4"
               onClick={(e) => scrollToSection(e, "testimonials")}
             >
               Testimonios
-            </a>
+            </a> */}
             <Button asChild className="w-full">
               <a href="#contact" onClick={(e) => scrollToSection(e, "contact")}>
                 Contacto

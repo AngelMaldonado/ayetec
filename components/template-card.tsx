@@ -59,13 +59,15 @@ export function TemplateCard({ template }: TemplateCardProps) {
                   <h3 className="text-lg font-semibold">Características principales</h3>
                   <ul className="space-y-2">
                     {features.map((feature, i) => (
-                      <li key={i} className="flex items-center space-x-2">
+                      <li key={i.toString()} className="flex items-center space-x-2">
                         <svg
                           className="h-5 w-5 text-primary"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
+                          aria-hidden="true"
                         >
+                          <title>Checkmark</title>
                           <path
                             strokeLinecap="round"
                             strokeLinejoin="round"

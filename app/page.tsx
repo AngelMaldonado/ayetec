@@ -7,8 +7,9 @@ import { HeroSection } from "@/components/hero-section"
 import { Navigation } from "@/components/navigation"
 import { ProcessSection } from "@/components/process-section"
 import { ServicesSection } from "@/components/services-section"
-import { CaseStudiesSection } from "@/components/templates-section"
-import { TestimonialsSection } from "@/components/testimonials-section"
+import { ProjectsSection } from "@/components/projects-section"
+// import { TestimonialsSection } from "@/components/testimonials-section"
+import { WebTemplatesSection } from "@/components/web-templates-section"
 
 export default function Home() {
   return (
@@ -18,10 +19,11 @@ export default function Home() {
         <HeroSection />
         <ServicesSection />
         <BenefitsSection />
-        <CaseStudiesSection />
-        <ContactSection />
+        <ProjectsSection />
+        <WebTemplatesSection />
         <ProcessSection />
-        <TestimonialsSection />
+        <ContactSection />
+        {/* <TestimonialsSection /> */}
       </main>
       <Footer />
     </div>
