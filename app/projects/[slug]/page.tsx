@@ -1,17 +1,11 @@
 import Image from "next/image"
+import fs from "fs"
+import path from "path"
 
 async function getProject(slug: string) {
-  const p = await fetch(`${process.env.URL}/api/projects/${slug}`)
-  return p.json() as Promise<{
-    title: string
-    description: string
-    longDescription: string
-    thumbnail: string
-    image: string
-    category: string
-    client: string
-    results: string[],
-  }>
+  const projectsData = fs.readFileSync(path.join(process.cwd(), 'data', 'projects.json'), 'utf8')
+  const projectsJSON = JSON.parse(projectsData) as Project[]
+  return projectsJSON.find((project) => project.slug === slug)
 }
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {

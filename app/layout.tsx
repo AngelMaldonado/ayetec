@@ -114,6 +114,8 @@ export default function RootLayout({
 }>) {
   const templatesData = fs.readFileSync(path.join(process.cwd(), 'data', 'templates.json'), 'utf8')
   const templatesJSON = JSON.parse(templatesData) as Template[]
+  const projectsData = fs.readFileSync(path.join(process.cwd(), 'data', 'projects.json'), 'utf8')
+  const projectsJSON = JSON.parse(projectsData) as Project[]
 
   return (
     <html lang="es" suppressHydrationWarning>
@@ -123,7 +125,7 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
         >
-          <AppProvider templates={templatesJSON}>
+          <AppProvider templates={templatesJSON} projects={projectsJSON}>
             {children}
           </AppProvider>
         </ThemeProvider>

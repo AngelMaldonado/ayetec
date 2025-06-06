@@ -1,63 +1,12 @@
+"use client"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
-
-interface CaseStudy {
-  id: string
-  title: string
-  description: string
-  image: string
-  category: "web" | "mobile" | "desktop"
-  client: string
-  results: string[]
-  slug: string
-}
+import { useAppContext } from "@/providers/app-provider"
+import Image from "next/image"
 
 export function ProjectsSection() {
-  const caseStudies: CaseStudy[] = [
-    {
-      id: "1",
-      title: "ATodaVenta",
-      description: "Aplicación móvil para gestión de ventas con inteligencia artificial",
-      image: "/projects/atodaventa.jpg",
-      category: "mobile",
-      client: "Software as a Service",
-      results: [
-        "Ayuda a los vendedores a tomar decisiones",
-        "Mejora la eficiencia de las ventas",
-        "Chat con IA experta en los negocios de los clientes"
-      ],
-      slug: "atodaventa"
-    },
-    {
-      id: "2",
-      title: "Mugs and Designs",
-      description: "E-commerce para la venta de productos de diseños personalizados",
-      image: "/projects/mugsanddesigns.jpg",
-      category: "web",
-      client: "Mugs and Designs",
-      results: [
-        "Nuevo canal de ventas para la empresa",
-        "Pagos integrados con Stripe",
-        "Panel de administración para el manejo de productos y ventas"
-      ],
-      slug: "mugsanddesigns"
-    },
-    {
-      id: "3",
-      title: "SMFotomark",
-      description: "Página web para la muestra de productos y servicios de la empresa",
-      image: "/projects/smfotomark.jpg",
-      category: "web",
-      client: "SMFotomark",
-      results: [
-        "Muestra de productos y servicios de la empresa",
-        "Múltiples páginas y CMS para el manejo de contenido",
-        "Galería de fotos"
-      ],
-      slug: "smfotomark"
-    },
-  ]
+  const { projects } = useAppContext()
 
   return (
     <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
@@ -73,7 +22,7 @@ export function ProjectsSection() {
           </div>
         </div>
         <div className="mx-auto grid max-w-5xl gap-8 py-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {caseStudies.map((project) => (
+          {projects.map((project) => (
             <Link
               href={`/projects/${project.slug}`}
               key={project.id}
@@ -81,10 +30,12 @@ export function ProjectsSection() {
             >
               <div className="relative overflow-hidden rounded-lg border bg-background p-2">
                 <div className="aspect-video overflow-hidden rounded-md">
-                  <img
-                    src={project.image}
+                  <Image
+                    src={project.thumbnail}
                     alt={project.title}
                     className="object-cover w-full h-full"
+                    width={1000}
+                    height={1000}
                   />
                 </div>
                 <div className="p-4 space-y-4">
