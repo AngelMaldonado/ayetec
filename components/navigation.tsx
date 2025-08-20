@@ -2,8 +2,9 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Rocket, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { ModeToggle } from "./ui/theme-toggle"
+import Image from "next/image"
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -24,8 +25,7 @@ export function Navigation() {
     <header className="sticky top-0 z-40 bg-background/90 will-change-scroll backdrop-blur-sm">
       <div className="container mx-auto flex h-16 items-center justify-between py-4 px-4">
         <div className="flex items-center gap-2">
-          <Rocket className="h-6 w-6" />
-          <span className="text-lg font-bold">AyE</span>
+          <Image src="/logo.png" alt="AYETec" width={100} height={32} />
         </div>
 
         {/* Desktop Navigation */}
