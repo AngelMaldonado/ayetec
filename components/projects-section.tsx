@@ -28,7 +28,7 @@ export function ProjectsSection() {
               key={project.id}
               className="group"
             >
-              <div className="relative overflow-hidden rounded-lg border bg-background p-2">
+              <div className="relative bg-card overflow-hidden rounded-lg border p-2">
                 <div className="aspect-video overflow-hidden rounded-md">
                   <Image
                     src={project.thumbnail}

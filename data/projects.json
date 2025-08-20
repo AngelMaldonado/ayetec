@@ -46,5 +46,21 @@
       "Galería de fotos"
     ],
     "slug": "smfotomark"
+  },
+  {
+    "id": "4",
+    "title": "UASLP Agenda Escolar",
+    "description": "Sistema completo de calendarización y agenda para eventos escolares",
+    "longDescription": "El sistema UASLP Agenda Escolar es un sistema completo de calendarización y agenda para eventos escolares. Este proyecto fue desarrollado con la finalidad de brindar una solución para la administración de eventos escolares en la Universidad Autónoma de San Luis Potosí. El sistema cuenta con una interfaz de usuario intuitiva y fácil de usar, que permite a los usuarios gestionar los eventos escolares de manera eficiente y sencilla.",
+    "thumbnail": "/projects/agenda-escolar-thumbnail.jpg",
+    "image": "/projects/agenda-escolar.jpg",
+    "category": "web",
+    "client": "Universidad Autónoma de San Luis Potosí",
+    "results": [
+      "Sistema completo de calendarización y agenda para eventos escolares",
+      "Interfaz de usuario intuitiva y fácil de usar",
+      "Gestión eficiente y sencilla de eventos escolares"
+    ],
+    "slug": "uaslp"
   }
 ]

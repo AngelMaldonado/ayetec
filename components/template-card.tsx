@@ -28,13 +28,14 @@ export function TemplateCard({ template }: TemplateCardProps) {
 
   return (
     <Card className="overflow-hidden h-full flex flex-col pt-0">
-      <div className="aspect-video w-full overflow-hidden">
+      <div className="relative aspect-[16/10] sm:aspect-video w-full overflow-hidden bg-muted">
         <Image
           src={`/templates/${name}/screenshot.png`}
-          width={400}
-          height={200}
+          fill
           alt={`Template ${name}`}
-          className="object-cover transition-all hover:scale-105"
+          className="object-cover transition-transform duration-300 hover:scale-105"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          priority={false}
         />
       </div>
       <CardHeader>

@@ -23,8 +23,8 @@ export function ProcessSection() {
           />
           <ProcessStep
             number={3}
-            title="Realiza el pago"
-            description="Una vez aprobado el diseño, procesaremos tu pago de forma segura a través de nuestra plataforma."
+            title="Realiza el 50% de pago"
+            description="Una vez aprobado el diseño, procesaremos tu pago de forma segura a través de nuestra plataforma. Liquida el 50% restante al finalizar el desarrollo."
           />
           <ProcessStep
             number={4}

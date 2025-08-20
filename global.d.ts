@@ -4,6 +4,7 @@ type Template = {
   description: string
   image: string
   features: string[]
+  category: string
 }
 
 type Project = {

@@ -120,4 +120,14 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Ensure all Link components have pointer cursor */
+  a {
+    cursor: pointer;
+  }
+
+  /* Ensure all buttons have pointer cursor when not disabled */
+  button:not(:disabled) {
+    cursor: pointer;
+  }
 }

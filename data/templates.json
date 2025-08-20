@@ -4,25 +4,27 @@
     "name": "antique_cafe",
     "description": "Diseño para un café antiguo",
     "image": "https://via.placeholder.com/150",
+    "category": "Restaurantes",
     "features": [
-      "Diseño moderno y clásico",
-      "Fondo de color marrón",
-      "Fuentes elegantes",
-      "Menú interactivo",
-      "Galería de imágenes"
+      "Visualización de tu menú",
+      "Sección de contacto",
+      "Enlace a Google Maps",
+      "Formulario de contacto",
+      "Adaptable a cualquier dispositivo"
     ]
   },
   {
     "title": "Applight",
     "name": "applight",
-    "description": "Diseño para una tienda de electrónica",
+    "description": "Diseño para un producto digital",
     "image": "https://via.placeholder.com/150",
+    "category": "Producto digital",
     "features": [
-      "Diseño moderno y funcional",
-      "Fondo de color azul",
-      "Fuentes elegantes",
-      "Menú interactivo",
-      "Galería de imágenes"
+      "Página única",
+      "Enlaces a Play Store y App Store",
+      "Mockups de tu producto",
+      "Video de presentación",
+      "Sección de contacto"
     ]
   },
   {
@@ -30,51 +32,198 @@
     "name": "box",
     "description": "Diseño para una academia de boxeo",
     "image": "https://via.placeholder.com/150",
+    "category": "Negocios y PYMEs",
     "features": [
-      "Diseño moderno y funcional",
-      "Fondo de color marrón",
-      "Fuentes elegantes",
-      "Menú interactivo",
-      "Galería de imágenes"
+      "Página única",
+      "Videos de demostración",
+      "Testimonios de clientes",
+      "Formulario de contacto",
+      "Mapa de ubicación",
+      "Enlaces a redes sociales"
     ]
   },
   {
     "title": "Finexo",
     "name": "finexo",
-    "description": "Diseño para una tienda de muebles",
+    "description": "Diseño para una empresa de servicios",
     "image": "https://via.placeholder.com/150",
+    "category": "Negocios y PYMEs",
     "features": [
-      "Diseño moderno y funcional",
-      "Fondo de color marrón",
-      "Fuentes elegantes",
-      "Menú interactivo",
-      "Galería de imágenes"
+      "Página única",
+      "Descripción de la empresa y tus servicios",
+      "Tu equipo de trabajo",
+      "Testimonios de clientes",
+      "Dirección y contacto",
+      "Suscripción a tu newsletter"
     ]
   },
   {
     "title": "SBS",
     "name": "sbs",
-    "description": "Diseño para una tienda de muebles",
+    "description": "Diseño para una escuela de patinaje",
     "image": "https://via.placeholder.com/150",
+    "category": "Educación",
     "features": [
-      "Diseño moderno y funcional",
-      "Fondo de color marrón",
-      "Fuentes elegantes",
-      "Menú interactivo",
-      "Galería de imágenes"
+      "Página única",
+      "Carrusel de imágenes",
+      "Descripción de las actividades",
+      "Acerca de la escuela",
+      "Videos de demostración",
+      "Testimonios de clientes",
+      "Sección de contacto",
+      "Enlaces a redes sociales"
     ]
   },
   {
     "title": "Spering",
     "name": "spering",
-    "description": "Diseño para una tienda de muebles",
+    "description": "Diseño para una empresa de servicios",
     "image": "https://via.placeholder.com/150",
+    "category": "Negocios y PYMEs",
+    "features": [
+      "Página única",
+      "Descripción de la empresa y tus servicios",
+      "Tu equipo de trabajo",
+      "Testimonios de clientes",
+      "Dirección y contacto",
+      "Suscripción a tu newsletter"
+    ]
+  },
+  {
+    "title": "Solid",
+    "name": "solid",
+    "description": "Diseño para una empresa de servicios",
+    "image": "https://via.placeholder.com/150",
+    "category": "Negocios y PYMEs",
+    "features": [
+      "Página única",
+      "Descripción de la empresa y tus servicios",
+      "Precios de tus servicios",
+      "Sección de contacto",
+      "Enlaces a redes sociales"
+    ]
+  },
+  {
+    "title": "Hyperspace",
+    "name": "hyperspace",
+    "description": "Diseño para una empresa de servicios",
+    "image": "https://via.placeholder.com/150",
+    "category": "Negocios y PYMEs",
     "features": [
       "Diseño moderno y funcional",
-      "Fondo de color marrón",
-      "Fuentes elegantes",
-      "Menú interactivo",
-      "Galería de imágenes"
+      "Secciones coloridas",
+      "Enlaces a redes sociales",
+      "Sección de contacto",
+      "Enlaces a Google Maps"
+    ]
+  },
+  {
+    "title": "Appy",
+    "name": "appy",
+    "description": "Diseño para una empresa de servicios",
+    "image": "https://via.placeholder.com/150",
+    "category": "Negocios y PYMEs",
+    "features": [
+      "Página única",
+      "Descripción de la empresa y tus servicios",
+      "Precios de tus servicios",
+      "Sección de contacto",
+      "Enlaces a redes sociales"
+    ]
+  },
+  {
+    "title": "Venus",
+    "name": "venus",
+    "description": "Diseño para un producto digital",
+    "image": "https://via.placeholder.com/150",
+    "category": "Producto digital",
+    "features": [
+      "Página única",
+      "Mockups de tu producto",
+      "Descripción de tu producto",
+      "Sección de contacto",
+      "Acceso anticipado"
+    ]
+  },
+  {
+    "title": "Infinity",
+    "name": "infinity",
+    "description": "Diseño para una empresa de servicios",
+    "image": "https://via.placeholder.com/150",
+    "category": "Negocios y PYMEs",
+    "features": [
+      "Página única",
+      "Descripción de la empresa y tus servicios",
+      "Visualización de trabajos realizados",
+      "Sección de contacto",
+      "Enlaces a redes sociales"
+    ]
+  },
+  {
+    "title": "Dopetrope",
+    "name": "dopetrope",
+    "description": "Diseño para un blog",
+    "image": "https://via.placeholder.com/150",
+    "category": "Blog",
+    "features": [
+      "Página única",
+      "Visualización de tus artículos",
+      "Sección de contacto",
+      "Enlaces a redes sociales"
+    ]
+  },
+  {
+    "title": "Editorial",
+    "name": "editorial",
+    "description": "Diseño para un blog",
+    "image": "https://via.placeholder.com/150",
+    "category": "Blog",
+    "features": [
+      "Página única",
+      "Visualización de tus artículos",
+      "Sección de contacto",
+      "Enlaces a redes sociales"
+    ]
+  },
+  {
+    "title": "Jaine",
+    "name": "jaine",
+    "description": "Diseño para un portafolio de trabajos",
+    "image": "https://via.placeholder.com/150",
+    "category": "Portafolio",
+    "features": [
+      "Página única",
+      "Visualización de tus trabajos",
+      "Ideal para fotógrafos y diseñadores",
+      "Sección de contacto",
+      "Enlaces a redes sociales"
+    ]
+  },
+  {
+    "title": "Prologue",
+    "name": "prologue",
+    "description": "Diseño para un portafolio de trabajos",
+    "image": "https://via.placeholder.com/150",
+    "category": "Portafolio",
+    "features": [
+      "Página única",
+      "Visualización de tus trabajos",
+      "Ideal para fotógrafos y diseñadores",
+      "Sección de contacto",
+      "Enlaces a redes sociales"
+    ]
+  },
+  {
+    "title": "Global",
+    "name": "global",
+    "description": "Diseño para una empresa de servicios",
+    "image": "https://via.placeholder.com/150",
+    "category": "Negocios y PYMEs",
+    "features": [
+      "Página única",
+      "Descripción de la empresa y tus servicios",
+      "Interacción con scroll",
+      "Sección de contacto"
     ]
   }
 ]
