@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { ModeToggle } from "./ui/theme-toggle"
@@ -9,14 +9,25 @@ import { useTheme } from "next-themes"
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const theme = useTheme()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault()
     const element = document.getElementById(id)
-    if (element) {
+    const header = document.querySelector('header')
+
+    if (element && header) {
+      const headerHeight = header.offsetHeight
+      const extraPadding = 16 // Additional breathing room
+      const targetPosition = element.offsetTop - headerHeight - extraPadding
+
       window.scrollTo({
-        top: element.offsetTop - 80, // Offset for the fixed header
+        top: targetPosition,
         behavior: "smooth",
       })
       setMobileMenuOpen(false) // Close mobile menu after clicking
@@ -27,7 +38,11 @@ export function Navigation() {
     <header className="sticky top-0 z-40 bg-background/90 will-change-scroll backdrop-blur-sm">
       <div className="container mx-auto flex h-16 items-center justify-between py-4 px-4">
         <div className="flex items-center gap-2">
-          <Image src={theme.resolvedTheme === "dark" ? "/logo-dark.svg" : "/logo.svg"} alt="AYETec" width={150} height={32} />
+          {mounted ? (
+            <Image src={theme.resolvedTheme === "dark" ? "/logo-dark.svg" : "/logo.svg"} alt="AYETec" width={150} height={32} />
+          ) : (
+            <Image src="/logo.svg" alt="AYETec" width={150} height={32} />
+          )}
         </div>
 
         {/* Desktop Navigation */}
@@ -94,48 +109,50 @@ export function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t bg-background">
-          <div className="container py-4 flex flex-col gap-4">
+        <div className="md:hidden border-t bg-background/95 backdrop-blur-sm">
+          <div className="container px-4 py-6 flex flex-col gap-6">
             <a
               href="#services"
-              className="text-sm font-medium hover:underline underline-offset-4"
+              className="text-base font-medium py-3 px-4 rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors"
               onClick={(e) => scrollToSection(e, "services")}
             >
               Servicios
             </a>
             <a
               href="#projects"
-              className="text-sm font-medium hover:underline underline-offset-4"
+              className="text-base font-medium py-3 px-4 rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors"
               onClick={(e) => scrollToSection(e, "templates")}
             >
               Casos de éxito
             </a>
             <a
               href="#process"
-              className="text-sm font-medium hover:underline underline-offset-4"
+              className="text-base font-medium py-3 px-4 rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors"
               onClick={(e) => scrollToSection(e, "process")}
             >
               Proceso
             </a>
             <a
               href="#templates"
-              className="text-sm font-medium hover:underline underline-offset-4"
+              className="text-base font-medium py-3 px-4 rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors"
               onClick={(e) => scrollToSection(e, "templates")}
             >
               Diseños Web
             </a>
             {/* <a
               href="#testimonials"
-              className="text-sm font-medium hover:underline underline-offset-4"
+              className="text-base font-medium py-3 px-4 rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors"
               onClick={(e) => scrollToSection(e, "testimonials")}
             >
               Testimonios
             </a> */}
-            <Button asChild className="w-full">
-              <a href="#contact" onClick={(e) => scrollToSection(e, "contact")}>
-                Contacto
-              </a>
-            </Button>
+            <div className="pt-2">
+              <Button asChild className="w-full">
+                <a href="#contact" onClick={(e) => scrollToSection(e, "contact")}>
+                  Contacto
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       )}

@@ -8,9 +8,9 @@ export function BenefitsSection() {
         <div className="mx-auto max-w-5xl space-y-12">
           {/* Web Development Benefits */}
           <div className="space-y-6">
-            <div className="flex items-center gap-2 w-max">
-              <Globe className="h-6 w-6 text-primary" />
-              <h2 className="text-2xl font-bold">Páginas y Aplicaciones <span className="text-rose-500">Web</span></h2>
+            <div className="flex items-center gap-2 flex-wrap justify-center text-center">
+              <Globe className="h-6 w-6 text-primary flex-shrink-0" />
+              <h2 className="text-2xl font-bold break-words">Páginas y Aplicaciones <span className="text-rose-500">Web</span></h2>
             </div>
             <div className="grid gap-6 grid-cols-1 lg:grid-cols-3">
               <BenefitItem
@@ -30,9 +30,9 @@ export function BenefitsSection() {
 
           {/* Mobile Development Benefits */}
           <div className="space-y-6">
-            <div className="flex items-center gap-2 w-max">
-              <Smartphone className="h-6 w-6" />
-              <h2 className="text-2xl font-bold">Aplicaciones <span className="text-rose-500">Móviles</span></h2>
+            <div className="flex items-center gap-2 flex-wrap justify-center text-center">
+              <Smartphone className="h-6 w-6 flex-shrink-0" />
+              <h2 className="text-2xl font-bold break-words">Aplicaciones <span className="text-rose-500">Móviles</span></h2>
             </div>
             <div className="grid gap-6 grid-cols-1 lg:grid-cols-3">
               <BenefitItem
@@ -52,9 +52,9 @@ export function BenefitsSection() {
 
           {/* Desktop Development Benefits */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2 w-max">
-              <Monitor className="h-6 w-6" />
-              <h2 className="text-2xl font-bold">Aplicaciones de <span className="text-rose-500">Escritorio</span></h2>
+            <div className="flex items-center gap-2 flex-wrap justify-center text-center">
+              <Monitor className="h-6 w-6 flex-shrink-0" />
+              <h2 className="text-2xl font-bold break-words">Aplicaciones de <span className="text-rose-500">Escritorio</span></h2>
             </div>
             <div className="grid gap-6 grid-cols-1 lg:grid-cols-3">
               <BenefitItem

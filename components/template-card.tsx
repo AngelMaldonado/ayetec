@@ -82,35 +82,37 @@ export function TemplateCard({ template }: TemplateCardProps) {
                   </ul>
                 </div>
                 <div className="space-y-4 w-full h-full flex flex-col justify-center items-center lg:col-span-2">
-                  <div className="flex items-center justify-between w-full">
+                  <div className="flex flex-col md:flex-row items-center justify-between w-full gap-4">
                     <h3 className="text-lg font-semibold">Vista previa</h3>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => {
-                        const iframe = document.querySelector(`iframe[title="Vista previa de ${title}"]`) as HTMLIFrameElement;
-                        if (iframe) {
-                          if (iframe.requestFullscreen) {
-                            iframe.requestFullscreen();
-                          } else if ('webkitRequestFullscreen' in iframe) {
-                            (iframe as unknown as { webkitRequestFullscreen: () => Promise<void> }).webkitRequestFullscreen();
-                          } else if ('msRequestFullscreen' in iframe) {
-                            (iframe as unknown as { msRequestFullscreen: () => Promise<void> }).msRequestFullscreen();
+                    <div className="flex flex-col gap-3 w-full md:w-auto md:flex-row">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => {
+                          const iframe = document.querySelector(`iframe[title="Vista previa de ${title}"]`) as HTMLIFrameElement;
+                          if (iframe) {
+                            if (iframe.requestFullscreen) {
+                              iframe.requestFullscreen();
+                            } else if ('webkitRequestFullscreen' in iframe) {
+                              (iframe as unknown as { webkitRequestFullscreen: () => Promise<void> }).webkitRequestFullscreen();
+                            } else if ('msRequestFullscreen' in iframe) {
+                              (iframe as unknown as { msRequestFullscreen: () => Promise<void> }).msRequestFullscreen();
+                            }
                           }
-                        }
-                      }}
-                      className="flex items-center gap-2"
-                    >
-                      <Fullscreen className="h-4 w-4" />
-                      Pantalla completa
-                    </Button>
-                    {/* button to open template in new tab */}
-                    <Button variant="outline" size="sm" onClick={() => {
-                      window.open(`/templates/${name}/index.html`, "_blank");
-                    }}>
-                      <ExternalLink className="h-4 w-4" />
-                      Abrir en nueva pestaña
-                    </Button>
+                        }}
+                        className="flex items-center gap-2"
+                      >
+                        <Fullscreen className="h-4 w-4" />
+                        Pantalla completa
+                      </Button>
+                      {/* button to open template in new tab */}
+                      <Button variant="outline" size="sm" onClick={() => {
+                        window.open(`/templates/${name}/index.html`, "_blank");
+                      }}>
+                        <ExternalLink className="h-4 w-4" />
+                        Abrir en nueva pestaña
+                      </Button>
+                    </div>
                   </div>
                   <div className="h-full lg:aspect-video w-full overflow-hidden rounded-lg border relative group">
                     <iframe
