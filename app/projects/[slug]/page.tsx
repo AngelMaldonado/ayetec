@@ -20,7 +20,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
-        <p className="text-lg text-muted-foreground mb-8">{project.description}</p>
+        <p className="text-xl text-muted-foreground mb-8">{project.description}</p>
         <Image className="rounded-lg mb-4 shadow-lg" src={project.image} alt={project.title} width={1000} height={1000} />
         <div className="grid gap-6">
           <div className="space-y-4">
