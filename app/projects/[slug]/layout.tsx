@@ -7,7 +7,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <main>
       <nav className="container container-fluid mx-auto my-4">
         <Link
-          href="/#benefits"
+          href="/#projects"
           className="flex items-center gap-2"
         >
           <ArrowLeftIcon className="w-4 h-4" />

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Box, Building, Calendar, Computer, Globe, Laptop, PenTool, ShoppingCartIcon, Smartphone } from "lucide-react"
+import { Box, Building, Computer, Globe, Laptop, PenTool, ShoppingCartIcon, Smartphone } from "lucide-react"
 
 export function ServicesSection() {
   return (
@@ -23,12 +23,6 @@ export function ServicesSection() {
             title="Portafolio Personal"
             description="Portafolio profesional para mostrar tus proyectos y habilidades."
             price="900.00"
-          />
-          <ServiceCard
-            icon={<Calendar className="h-6 w-6 text-primary" />}
-            title="Evento o Campaña"
-            description="Página para promocionar tu evento o campaña de marketing."
-            price="1,500.00"
           />
           <ServiceCard
             icon={<Laptop className="h-6 w-6 text-primary" />}

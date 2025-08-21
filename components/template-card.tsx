@@ -88,7 +88,7 @@ export function TemplateCard({ template }: TemplateCardProps) {
                       variant="outline"
                       size="sm"
                       onClick={() => {
-                        const iframe = document.querySelector(`iframe[title="Preview of ${title}"]`) as HTMLIFrameElement;
+                        const iframe = document.querySelector(`iframe[title="Vista previa de ${title}"]`) as HTMLIFrameElement;
                         if (iframe) {
                           if (iframe.requestFullscreen) {
                             iframe.requestFullscreen();

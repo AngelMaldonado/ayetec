@@ -5,9 +5,11 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { ModeToggle } from "./ui/theme-toggle"
 import Image from "next/image"
+import { useTheme } from "next-themes"
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const theme = useTheme()
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault()
@@ -25,7 +27,7 @@ export function Navigation() {
     <header className="sticky top-0 z-40 bg-background/90 will-change-scroll backdrop-blur-sm">
       <div className="container mx-auto flex h-16 items-center justify-between py-4 px-4">
         <div className="flex items-center gap-2">
-          <Image src="/logo.png" alt="AYETec" width={100} height={32} />
+          <Image src={theme.resolvedTheme === "dark" ? "/logo-dark.svg" : "/logo.svg"} alt="AYETec" width={150} height={32} />
         </div>
 
         {/* Desktop Navigation */}
